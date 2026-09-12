@@ -10,308 +10,242 @@
   <meta property="og:image" content="assets/og.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ═══════════ PRELOADER ═══════════ -->
+  <!-- ═══ PROGRESS ═══ -->
+  <div class="progress" id="progress"></div>
+
+  <!-- ═══ GRAIN ═══ -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ═══ PRELOADER ═══ -->
   <div class="preloader" id="preloader">
     <div class="preloader__inner">
-      <div class="preloader__name"><span>R</span><span>I</span><span>M</span><span>O</span><span>N</span>&nbsp;<span>D</span><span>E</span><span>B</span><span>N</span><span>A</span><span>T</span><span>H</span></div>
-      <div class="preloader__count" id="preCount">0</div>
-      <div class="preloader__bar"><div class="preloader__bar-fill" id="preBar"></div></div>
+      <div class="preloader__brand mono">RDN — PORTFOLIO ©2026</div>
+      <div class="preloader__word" id="preWord">RIMON DEBNATH</div>
+      <div class="preloader__foot">
+        <span class="mono" id="preCount">000</span>
+        <span class="mono">LOADING EXPERIENCE</span>
+      </div>
     </div>
-    <div class="preloader__curtain"></div>
-    <div class="preloader__curtain preloader__curtain--2"></div>
+    <div class="preloader__panel"></div>
+    <div class="preloader__panel preloader__panel--2"></div>
   </div>
 
-  <!-- ═══════════ CURSOR ═══════════ -->
+  <!-- ═══ CURSOR ═══ -->
   <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-label mono" id="cursorLabel">OPEN ↗</div>
 
-  <!-- ═══════════ NAV ═══════════ -->
+  <!-- ═══ NAV ═══ -->
   <header class="nav" id="nav">
-    <a href="#home" class="nav__logo magnetic" data-cursor="hover">RDN<span class="accent">.</span></a>
+    <a href="#home" class="nav__logo" data-hover>RIMON<span>©</span></a>
     <nav class="nav__links">
-      <a href="#about" class="nav__link" data-cursor="hover">About</a>
-      <a href="#skills" class="nav__link" data-cursor="hover">Stack</a>
-      <a href="#experience" class="nav__link" data-cursor="hover">Experience</a>
-      <a href="#work" class="nav__link" data-cursor="hover">Work</a>
-      <a href="#contact" class="nav__link" data-cursor="hover">Contact</a>
+      <a href="#about" class="nav__link" data-hover><span class="mono nav__idx">01</span>About</a>
+      <a href="#experience" class="nav__link" data-hover><span class="mono nav__idx">02</span>Experience</a>
+      <a href="#work" class="nav__link" data-hover><span class="mono nav__idx">03</span>Work</a>
+      <a href="#contact" class="nav__link" data-hover><span class="mono nav__idx">04</span>Contact</a>
     </nav>
-    <a href="mailto:rimonok12@gmail.com" class="nav__cta magnetic" data-cursor="hover">
-      <span class="nav__cta-dot"></span> Available for work
-    </a>
-    <button class="nav__burger" id="burger" aria-label="Menu" data-cursor="hover"><span></span><span></span></button>
+    <a href="mailto:rimonok12@gmail.com" class="nav__cta" data-hover><span class="nav__dot"></span>Open to work</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </header>
 
-  <!-- Mobile menu -->
   <div class="menu" id="menu">
     <div class="menu__links">
-      <a href="#about" class="menu__link">About</a>
-      <a href="#skills" class="menu__link">Stack</a>
-      <a href="#experience" class="menu__link">Experience</a>
-      <a href="#work" class="menu__link">Work</a>
-      <a href="#contact" class="menu__link">Contact</a>
+      <a href="#about" class="menu__link"><span class="mono">01</span>About</a>
+      <a href="#experience" class="menu__link"><span class="mono">02</span>Experience</a>
+      <a href="#work" class="menu__link"><span class="mono">03</span>Work</a>
+      <a href="#contact" class="menu__link"><span class="mono">04</span>Contact</a>
     </div>
-    <div class="menu__foot">
-      <a href="mailto:rimonok12@gmail.com">rimonok12@gmail.com</a>
-    </div>
+    <a class="menu__mail mono" href="mailto:rimonok12@gmail.com">RIMONOK12@GMAIL.COM</a>
   </div>
 
-  <main id="main">
+  <main>
 
-    <!-- ═══════════ HERO ═══════════ -->
+    <!-- ═══ HERO ═══ -->
     <section class="hero" id="home">
-      <canvas id="webgl" class="hero__canvas"></canvas>
-      <div class="hero__noise"></div>
+      <canvas id="silk" class="hero__canvas"></canvas>
+      <div class="hero__frame">
+        <div class="hero__topline">
+          <span class="mono reveal-b">FOLIO / 2026</span>
+          <span class="mono reveal-b">SOFTWARE ENGINEER — AI &amp; FULL-STACK</span>
+          <span class="mono reveal-b">BASED IN BANGLADESH</span>
+        </div>
 
-      <div class="hero__content">
-        <div class="hero__tag reveal-line"><span class="mono">// SOFTWARE ENGINEER — AI & FULL-STACK</span></div>
         <h1 class="hero__title">
-          <span class="hero__line"><span class="hero__word" data-split>RIMON</span></span>
-          <span class="hero__line hero__line--indent">
-            <span class="hero__word hero__word--outline" data-split>DEBNATH</span>
-          </span>
+          <span class="hero__row"><span class="hero__word" data-chars>CREATIVE</span><span class="hero__thin" data-chars>DEV</span></span>
+          <span class="hero__row hero__row--right"><span class="hero__thin hero__thin--it" data-chars>&amp;</span><span class="hero__word hero__word--stroke" data-chars>AI&nbsp;ENGINEER</span></span>
         </h1>
-        <div class="hero__row">
-          <p class="hero__desc">I build full-stack web apps and <em>LLM-powered systems</em> that ship to real users — currently engineering the AI behind a fintech platform serving 7 divisions of Bangladesh.</p>
-          <div class="hero__roles mono">
-            <div class="hero__roles-track" id="rolesTrack">
-              <span>NEXT.JS &amp; REACT</span>
-              <span>AI / LLM WORKFLOWS</span>
-              <span>NODE.JS APIS</span>
-              <span>AWS CLOUD</span>
-              <span>DATA PIPELINES</span>
-            </div>
+
+        <div class="hero__base">
+          <p class="hero__intro">I'm <b>Rimon Debnath</b> — I design and engineer full-stack products and LLM-powered systems that ship to real users, from fintech dashboards to production AI workflows.</p>
+          <div class="hero__stack mono">
+            <span>NEXT.JS</span><span>REACT</span><span>NODE.JS</span><span>PYTHON</span><span>AWS</span><span>LLMs</span>
+          </div>
+          <div class="hero__meta">
+            <span class="mono" id="dhakaTime">--:--:--</span>
+            <span class="mono">GMT+6 — DHAKA</span>
           </div>
         </div>
-        <div class="hero__bottom">
-          <a href="#work" class="hero__scroll magnetic" data-cursor="hover">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Scroll to explore
-          </a>
-          <div class="hero__loc mono">COMILLA, BD — <span id="dhakaTime">--:--</span> GMT+6</div>
-        </div>
+
+        <a href="#about" class="hero__badge" data-hover aria-label="Scroll down">
+          <svg viewBox="0 0 100 100" class="hero__badge-ring"><defs><path id="circ" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><text><textPath href="#circ">SCROLL — EXPLORE — SCROLL — EXPLORE — </textPath></text></svg>
+          <span class="hero__badge-arrow">↓</span>
+        </a>
       </div>
     </section>
 
-    <!-- ═══════════ MARQUEE ═══════════ -->
+    <!-- ═══ MARQUEE ═══ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>FULL-STACK DEVELOPMENT <i>✦</i> AI &amp; LLM INTEGRATION <i>✦</i> NEXT.JS <i>✦</i> REACT <i>✦</i> NODE.JS <i>✦</i> PYTHON <i>✦</i> AWS <i>✦</i> </span>
-        <span>FULL-STACK DEVELOPMENT <i>✦</i> AI &amp; LLM INTEGRATION <i>✦</i> NEXT.JS <i>✦</i> REACT <i>✦</i> NODE.JS <i>✦</i> PYTHON <i>✦</i> AWS <i>✦</i> </span>
+        <span>FULL-STACK <i>✺</i> AI SYSTEMS <i>✺</i> NEXT.JS <i>✺</i> LLM WORKFLOWS <i>✺</i> CLOUD <i>✺</i>&nbsp;</span><span>FULL-STACK <i>✺</i> AI SYSTEMS <i>✺</i> NEXT.JS <i>✺</i> LLM WORKFLOWS <i>✺</i> CLOUD <i>✺</i>&nbsp;</span>
       </div>
     </div>
 
-    <!-- ═══════════ ABOUT ═══════════ -->
+    <!-- ═══ ABOUT ═══ -->
     <section class="about section" id="about">
       <div class="section__head">
-        <span class="section__num mono">01</span>
-        <h2 class="section__title" data-split-words>The engineer behind the code</h2>
+        <span class="section__num" data-chars>01</span>
+        <span class="section__label mono">ABOUT — WHO I AM</span>
       </div>
+
       <div class="about__grid">
-        <div class="about__img-wrap">
-          <div class="about__img-mask"><img src="assets/rimon.jpg" alt="Rimon Debnath" class="about__img" /></div>
-          <div class="about__img-frame"></div>
+        <div class="about__visual">
+          <div class="orb">
+            <div class="orb__blob"></div>
+            <div class="orb__ring orb__ring--1"></div>
+            <div class="orb__ring orb__ring--2"></div>
+            <svg viewBox="0 0 200 200" class="orb__text"><defs><path id="orbit" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#orbit">SOFTWARE ENGINEER ✦ AI &amp; FULL-STACK ✦ NEXT.JS ✦ LLM SYSTEMS ✦ </textPath></text></svg>
+            <div class="orb__core">RD</div>
+          </div>
         </div>
+
         <div class="about__body">
-          <p class="about__text" data-split-words>I'm a Software Engineer (AI) at SahajMobile, a cardless-EMI fintech in Bangladesh — promoted from Frontend Developer within 5 months to build the AI systems and production frontend behind the platform.</p>
-          <p class="about__text about__text--dim" data-split-words>My LLM-powered workflows turn days of manual report and document production into minutes. My pipelines process hundreds of thousands of transaction records daily. Before that, I ran high-availability AWS infrastructure at Neovatech and shipped REST APIs at Younglabs. I care about clean code, honest timelines, and software that survives contact with real users.</p>
+          <p class="about__lead" data-words>I turn ambitious ideas into production software — currently building the AI brain of a cardless-EMI fintech, where my LLM workflows compress days of manual work into minutes.</p>
+          <p class="about__text" data-words>Promoted from Frontend Developer to Software Engineer (AI) in five months at SahajMobile. Before that I ran high-availability AWS infrastructure at Neovatech and shipped real-time APIs at Younglabs. I obsess over clean architecture, honest timelines, and interfaces that feel expensive.</p>
           <div class="stats">
             <div class="stat"><div class="stat__num"><span data-count="2">0</span>+</div><div class="stat__label mono">YEARS SHIPPING</div></div>
             <div class="stat"><div class="stat__num"><span data-count="350">0</span>K+</div><div class="stat__label mono">RECORDS / DAY</div></div>
             <div class="stat"><div class="stat__num"><span data-count="99.9" data-decimal="1">0</span>%</div><div class="stat__label mono">AWS UPTIME</div></div>
-            <div class="stat"><div class="stat__num"><span data-count="10">0</span>K+</div><div class="stat__label mono">MONTHLY USERS</div></div>
+            <div class="stat"><div class="stat__num"><span data-count="12">0</span>+</div><div class="stat__label mono">PROJECTS SHIPPED</div></div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ═══════════ SKILLS ═══════════ -->
-    <section class="skills section" id="skills">
-      <div class="section__head">
-        <span class="section__num mono">02</span>
-        <h2 class="section__title" data-split-words>Weapons of choice</h2>
-      </div>
-      <div class="skills__rows">
-        <div class="skills__row" data-tilt-row>
-          <h3 class="skills__cat mono">FRONTEND</h3>
-          <div class="skills__pills"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Zustand</span><span>Vite</span><span>GSAP</span></div>
-        </div>
-        <div class="skills__row" data-tilt-row>
-          <h3 class="skills__cat mono">BACKEND</h3>
-          <div class="skills__pills"><span>Node.js</span><span>Express</span><span>REST APIs</span><span>Microservices</span><span>MongoDB</span><span>Redis</span><span>PostgreSQL</span><span>Meilisearch</span></div>
-        </div>
-        <div class="skills__row" data-tilt-row>
-          <h3 class="skills__cat mono">AI &amp; DATA</h3>
-          <div class="skills__pills"><span>LLM Integration</span><span>Prompt Engineering</span><span>OpenAI / Claude APIs</span><span>AI Workflow Automation</span><span>Python</span><span>Data Pipelines</span><span>Dashboards</span></div>
-        </div>
-        <div class="skills__row" data-tilt-row>
-          <h3 class="skills__cat mono">CLOUD &amp; DEVOPS</h3>
-          <div class="skills__pills"><span>AWS EC2</span><span>S3</span><span>Lambda</span><span>API Gateway</span><span>CloudWatch</span><span>Docker</span><span>GitHub Actions</span><span>CI/CD</span><span>Vercel</span></div>
-        </div>
+      <div class="about__services">
+        <div class="svc" data-hover><span class="mono svc__idx">S/01</span><h3>Full-Stack Products</h3><p>Next.js · React · TypeScript · Node — design to deploy.</p></div>
+        <div class="svc" data-hover><span class="mono svc__idx">S/02</span><h3>AI That Ships</h3><p>LLM workflows, chatbots, document engines, data pipelines.</p></div>
+        <div class="svc" data-hover><span class="mono svc__idx">S/03</span><h3>Cloud &amp; Scale</h3><p>AWS architecture, Docker, CI/CD — 99.9% uptime as a habit.</p></div>
       </div>
     </section>
 
-    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <!-- ═══ EXPERIENCE ═══ -->
     <section class="exp section" id="experience">
       <div class="section__head">
-        <span class="section__num mono">03</span>
-        <h2 class="section__title" data-split-words>Where I've shipped</h2>
+        <span class="section__num" data-chars>02</span>
+        <span class="section__label mono">EXPERIENCE — WHERE I'VE SHIPPED</span>
       </div>
       <div class="exp__list">
         <article class="exp__item">
-          <div class="exp__meta">
-            <span class="exp__date mono">MAY 2026 — PRESENT</span>
-            <span class="exp__badge">CURRENT</span>
+          <span class="exp__date mono">2026 — NOW</span>
+          <div class="exp__mid">
+            <h3 class="exp__role">Software Engineer <em>(AI)</em></h3>
+            <span class="exp__co mono">SAHAJMOBILE — FINTECH</span>
           </div>
-          <div class="exp__main">
-            <h3 class="exp__role">Software Engineer (AI)</h3>
-            <div class="exp__co">SahajMobile — Cardless EMI Fintech · Dhaka</div>
-            <p class="exp__desc">Promoted from Frontend Developer in 5 months. Shipping LLM workflows that generate reports, corporate documents and Bangla video content — cutting production time from days to minutes. Engineering data pipelines over 350K+ transaction records for field managers across 7 divisions.</p>
-          </div>
+          <p class="exp__desc">Promoted in 5 months. LLM workflows generating reports, documents &amp; Bangla video; pipelines over 350K+ daily records for 7 divisions.</p>
         </article>
         <article class="exp__item">
-          <div class="exp__meta"><span class="exp__date mono">DEC 2025 — APR 2026</span></div>
-          <div class="exp__main">
+          <span class="exp__date mono">2025 — 2026</span>
+          <div class="exp__mid">
             <h3 class="exp__role">Frontend Developer</h3>
-            <div class="exp__co">SahajMobile · Dhaka</div>
-            <p class="exp__desc">Delivered production frontend features in React, Next.js and Tailwind CSS, working directly with founders. Kept the platform stable for field teams — debugging production issues and managing database operations.</p>
+            <span class="exp__co mono">SAHAJMOBILE — FINTECH</span>
           </div>
+          <p class="exp__desc">Production features in Next.js, React &amp; Tailwind, working directly with founders; kept the platform stable for field teams.</p>
         </article>
         <article class="exp__item">
-          <div class="exp__meta"><span class="exp__date mono">JAN 2025 — NOV 2025</span></div>
-          <div class="exp__main">
-            <h3 class="exp__role">Cloud Engineer &amp; Full-Stack Developer</h3>
-            <div class="exp__co">Neovatech · Remote</div>
-            <p class="exp__desc">Architected high-availability AWS infrastructure sustaining 99.9% uptime with 40% lower API latency. Built secure microservices for 7+ client projects serving 10,000+ monthly users. Cut deployment time from 3 days to under 24 hours with Docker + GitHub Actions.</p>
+          <span class="exp__date mono">2025</span>
+          <div class="exp__mid">
+            <h3 class="exp__role">Cloud &amp; Full-Stack Engineer</h3>
+            <span class="exp__co mono">NEOVATECH — REMOTE</span>
           </div>
+          <p class="exp__desc">AWS architecture at 99.9% uptime, −40% API latency; microservices for 7+ clients and 10K+ monthly users; CI/CD from 3 days to &lt;24h.</p>
         </article>
         <article class="exp__item">
-          <div class="exp__meta"><span class="exp__date mono">APR 2022 — SEP 2022</span></div>
-          <div class="exp__main">
+          <span class="exp__date mono">2022</span>
+          <div class="exp__mid">
             <h3 class="exp__role">Full-Stack Engineer</h3>
-            <div class="exp__co">Younglabs · Noida, India</div>
-            <p class="exp__desc">Created Node.js REST APIs handling 500+ concurrent users and delivered an MVP on a 12-week schedule with Firebase Auth and real-time features.</p>
+            <span class="exp__co mono">YOUNGLABS — INDIA</span>
           </div>
+          <p class="exp__desc">Node.js REST APIs at 500+ concurrent users; MVP delivered on a 12-week schedule with Firebase auth and real-time features.</p>
         </article>
       </div>
     </section>
 
-    <!-- ═══════════ WORK ═══════════ -->
+    <!-- ═══ WORK ═══ -->
     <section class="work section" id="work">
       <div class="section__head">
-        <span class="section__num mono">04</span>
-        <h2 class="section__title" data-split-words>Selected works</h2>
+        <span class="section__num" data-chars>03</span>
+        <span class="section__label mono">SELECTED WORK — 12 PROJECTS</span>
       </div>
-      <div class="work__list">
 
-        <a class="project" href="https://cartkoro.com" target="_blank" rel="noopener" data-cursor="view">
-          <div class="project__img-wrap"><img src="assets/p-cartkoro.png" alt="Cartkoro e-commerce platform" loading="lazy" /></div>
-          <div class="project__info">
-            <span class="project__idx mono">P.01</span>
-            <h3 class="project__name">Cartkoro</h3>
-            <p class="project__blurb">Full-featured e-commerce platform — JWT auth, catalog with Meilisearch, cart &amp; checkout, SSLCommerz payments, Redis caching, S3 media, admin panel.</p>
-            <div class="project__tags mono"><span>NEXT.JS</span><span>NODE.JS</span><span>MONGODB</span><span>REDIS</span><span>AWS S3</span></div>
-          </div>
-        </a>
+      <ul class="plist" id="plist">
+        <li><a class="prow" href="#" data-tags="NEXT.JS · REACT · TYPESCRIPT · FINTECH" data-cat="WORK / SAHAJMOBILE" data-year="2026"><span class="prow__idx mono">01</span><span class="prow__name">EMI Platform Frontend</span><span class="prow__cat mono">WORK / SAHAJMOBILE</span><span class="prow__year mono">2026</span><span class="prow__arr">●</span></a></li>
+        <li><a class="prow" href="#" data-tags="LLM · PYTHON · PROMPT PIPELINES · BANGLA" data-cat="WORK / SAHAJMOBILE" data-year="2026"><span class="prow__idx mono">02</span><span class="prow__name">AI Document &amp; Report Engine</span><span class="prow__cat mono">WORK / SAHAJMOBILE</span><span class="prow__year mono">2026</span><span class="prow__arr">●</span></a></li>
+        <li><a class="prow" href="#" data-tags="NEXT.JS · PYTHON · SQL · 350K+ RECORDS" data-cat="WORK / SAHAJMOBILE" data-year="2026"><span class="prow__idx mono">03</span><span class="prow__name">Collections Intelligence Dashboard</span><span class="prow__cat mono">WORK / SAHAJMOBILE</span><span class="prow__year mono">2026</span><span class="prow__arr">●</span></a></li>
+        <li><a class="prow" href="#" data-tags="LLM · TTS · AUTOMATION · VIDEO" data-cat="WORK / SAHAJMOBILE" data-year="2026"><span class="prow__idx mono">04</span><span class="prow__name">Bangla AI Video Pipeline</span><span class="prow__cat mono">WORK / SAHAJMOBILE</span><span class="prow__year mono">2026</span><span class="prow__arr">●</span></a></li>
+        <li><a class="prow" href="https://cartkoro.com" target="_blank" rel="noopener" data-tags="NEXT.JS · NODE · MONGODB · REDIS · S3" data-cat="PERSONAL / LIVE" data-year="2025"><span class="prow__idx mono">05</span><span class="prow__name">Cartkoro E-commerce</span><span class="prow__cat mono">PERSONAL / LIVE</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
+        <li><a class="prow" href="https://github.com/Rimonok12/atsChecker" target="_blank" rel="noopener" data-tags="REACT · NEXT.JS · AI SCORING · PDF.JS" data-cat="PERSONAL / AI" data-year="2025"><span class="prow__idx mono">06</span><span class="prow__name">CVScoreAI — ATS Checker</span><span class="prow__cat mono">PERSONAL / AI</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
+        <li><a class="prow" href="https://short-flix-three.vercel.app" target="_blank" rel="noopener" data-tags="NEXT.JS · NODE API · SWIPE UX" data-cat="PERSONAL / LIVE" data-year="2025"><span class="prow__idx mono">07</span><span class="prow__name">ShortFlix Video Platform</span><span class="prow__cat mono">PERSONAL / LIVE</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
+        <li><a class="prow" href="https://rdngalaxy.vercel.app" target="_blank" rel="noopener" data-tags="REACT 19 · THREE.JS · GSAP · GLASS UI" data-cat="PERSONAL / 3D" data-year="2025"><span class="prow__idx mono">08</span><span class="prow__name">RDN Galaxy — 3D Experience</span><span class="prow__cat mono">PERSONAL / 3D</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
+        <li><a class="prow" href="https://rdn-awwardwinning.netlify.app/" target="_blank" rel="noopener" data-tags="GSAP · SCROLL SCENES · MOTION" data-cat="PERSONAL / MOTION" data-year="2025"><span class="prow__idx mono">09</span><span class="prow__name">Metagame Nexus</span><span class="prow__cat mono">PERSONAL / MOTION</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
+        <li><a class="prow" href="https://www.neovatech.in/" target="_blank" rel="noopener" data-tags="REACT · LANDING · BRAND SITE" data-cat="CLIENT / NEOVATECH" data-year="2025"><span class="prow__idx mono">10</span><span class="prow__name">NeovaTech Company Site</span><span class="prow__cat mono">CLIENT / NEOVATECH</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
+        <li><a class="prow" href="https://job-portal-five-nu-16.vercel.app" target="_blank" rel="noopener" data-tags="NEXT.JS · AUTH · SEARCH · CRUD" data-cat="PERSONAL / LIVE" data-year="2024"><span class="prow__idx mono">11</span><span class="prow__name">Job Portal</span><span class="prow__cat mono">PERSONAL / LIVE</span><span class="prow__year mono">2024</span><span class="prow__arr">↗</span></a></li>
+        <li><a class="prow" href="https://snazzy-cactus-e705ea.netlify.app/" target="_blank" rel="noopener" data-tags="REACT 19 · TMDB API · TAILWIND" data-cat="PERSONAL / LIVE" data-year="2024"><span class="prow__idx mono">12</span><span class="prow__name">CineScope Movie Explorer</span><span class="prow__cat mono">PERSONAL / LIVE</span><span class="prow__year mono">2024</span><span class="prow__arr">↗</span></a></li>
+      </ul>
 
-        <a class="project" href="https://github.com/Rimonok12/atsChecker" target="_blank" rel="noopener" data-cursor="view">
-          <div class="project__img-wrap"><img src="assets/p-cvscore.png" alt="CVScoreAI resume checker" loading="lazy" /></div>
-          <div class="project__info">
-            <span class="project__idx mono">P.02</span>
-            <h3 class="project__name">CVScoreAI</h3>
-            <p class="project__blurb">AI-powered ATS resume analyzer — instant score with category-wise breakdown, keyword &amp; structure feedback, PDF parsing with PDF.js.</p>
-            <div class="project__tags mono"><span>REACT</span><span>NEXT.JS</span><span>TYPESCRIPT</span><span>AI</span><span>ZUSTAND</span></div>
-          </div>
-        </a>
-
-        <a class="project" href="https://short-flix-three.vercel.app" target="_blank" rel="noopener" data-cursor="view">
-          <div class="project__img-wrap"><img src="assets/p-shortflix.png" alt="ShortFlix video platform" loading="lazy" /></div>
-          <div class="project__info">
-            <span class="project__idx mono">P.03</span>
-            <h3 class="project__name">ShortFlix</h3>
-            <p class="project__blurb">Mini video platform with a swipeable Shorts viewer, search filtering and auto-play — Node.js API + Next.js frontend, fully responsive.</p>
-            <div class="project__tags mono"><span>NEXT.JS</span><span>NODE.JS</span><span>API</span><span>VERCEL</span></div>
-          </div>
-        </a>
-
-        <a class="project" href="https://www.neovatech.in/" target="_blank" rel="noopener" data-cursor="view">
-          <div class="project__img-wrap"><img src="assets/p-neovatech.png" alt="NeovaTech landing page" loading="lazy" /></div>
-          <div class="project__info">
-            <span class="project__idx mono">P.04</span>
-            <h3 class="project__name">NeovaTech</h3>
-            <p class="project__blurb">Official landing page for a modern tech company — clean, fast and conversion-focused.</p>
-            <div class="project__tags mono"><span>REACT</span><span>LANDING</span><span>UI/UX</span></div>
-          </div>
-        </a>
-
-        <a class="project" href="https://rdn-awwardwinning.netlify.app/" target="_blank" rel="noopener" data-cursor="view">
-          <div class="project__img-wrap"><img src="assets/p-metagame.png" alt="Metagame Nexus" loading="lazy" /></div>
-          <div class="project__info">
-            <span class="project__idx mono">P.05</span>
-            <h3 class="project__name">Metagame Nexus</h3>
-            <p class="project__blurb">A futuristic play-economy concept site with award-style animations, scroll-driven scenes and bold typography.</p>
-            <div class="project__tags mono"><span>GSAP</span><span>REACT</span><span>ANIMATION</span></div>
-          </div>
-        </a>
-
-      </div>
-      <div class="work__more">
-        <a href="https://github.com/Rimonok12?tab=repositories" target="_blank" rel="noopener" class="btn magnetic" data-cursor="hover">
-          All repositories <span class="btn__arrow">→</span>
-        </a>
+      <div class="work__foot">
+        <a href="https://github.com/Rimonok12?tab=repositories" target="_blank" rel="noopener" class="btn" data-hover>Full archive on GitHub <span>↗</span></a>
       </div>
     </section>
 
-    <!-- ═══════════ SERVICES STRIP ═══════════ -->
-    <section class="services section">
-      <div class="section__head">
-        <span class="section__num mono">05</span>
-        <h2 class="section__title" data-split-words>What I can do for you</h2>
-      </div>
-      <div class="services__list">
-        <div class="service"><span class="service__num mono">S.01</span><h3>Full-Stack Web Apps</h3><p>React · Next.js · TypeScript · Node.js — from Figma to production.</p></div>
-        <div class="service"><span class="service__num mono">S.02</span><h3>AI Features That Ship</h3><p>LLM integrations, chatbots, document &amp; report generation, data pipelines.</p></div>
-        <div class="service"><span class="service__num mono">S.03</span><h3>Cloud &amp; DevOps</h3><p>AWS architecture, Docker, CI/CD — 99.9% uptime is a habit, not a promise.</p></div>
-      </div>
-    </section>
-
-    <!-- ═══════════ CONTACT ═══════════ -->
+    <!-- ═══ CONTACT ═══ -->
     <section class="contact section" id="contact">
-      <div class="contact__inner">
-        <p class="contact__kicker mono reveal-line">HAVE A PROJECT IN MIND?</p>
-        <a href="mailto:rimonok12@gmail.com" class="contact__big" data-cursor="hover">
-          <span class="contact__big-line" data-split>LET'S BUILD</span>
-          <span class="contact__big-line contact__big-line--accent" data-split>SOMETHING</span>
+      <div class="section__head">
+        <span class="section__num" data-chars>04</span>
+        <span class="section__label mono">CONTACT — LET'S TALK</span>
+      </div>
+      <div class="contact__stage">
+        <p class="contact__kick mono reveal-b">HAVE AN IDEA IN MIND?</p>
+        <a href="mailto:rimonok12@gmail.com" class="contact__big" data-hover>
+          <span class="contact__line" data-chars>LET'S&nbsp;SHIP</span>
+          <span class="contact__line contact__line--stroke" data-chars>SOMETHING&nbsp;RARE</span>
         </a>
-        <div class="contact__links">
-          <a href="mailto:rimonok12@gmail.com" class="contact__link magnetic" data-cursor="hover">rimonok12@gmail.com</a>
-          <a href="https://www.upwork.com/freelancers/~01f4c20e0c87d39498" target="_blank" rel="noopener" class="contact__link magnetic" data-cursor="hover">Hire me on Upwork</a>
+        <div class="contact__row">
+          <a href="mailto:rimonok12@gmail.com" class="contact__pill" data-hover>rimonok12@gmail.com</a>
+          <a href="https://www.upwork.com/freelancers/~01f4c20e0c87d39498" target="_blank" rel="noopener" class="contact__pill contact__pill--ghost" data-hover>Hire me on Upwork ↗</a>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
-    <div class="footer__left mono">© <span id="year">2026</span> RIMON DEBNATH</div>
-    <div class="footer__socials">
-      <a href="https://github.com/Rimonok12" target="_blank" rel="noopener" data-cursor="hover">GitHub</a>
-      <a href="https://linkedin.com/in/rimon12" target="_blank" rel="noopener" data-cursor="hover">LinkedIn</a>
-      <a href="mailto:rimonok12@gmail.com" data-cursor="hover">Email</a>
+    <span class="mono">© <span id="year">2026</span> RIMON DEBNATH</span>
+    <div class="footer__soc mono">
+      <a href="https://github.com/Rimonok12" target="_blank" rel="noopener" data-hover>GITHUB</a>
+      <a href="https://linkedin.com/in/rimon12" target="_blank" rel="noopener" data-hover>LINKEDIN</a>
+      <a href="mailto:rimonok12@gmail.com" data-hover>EMAIL</a>
     </div>
-    <div class="footer__right mono">COMILLA, BANGLADESH · GMT+6</div>
+    <span class="mono">DESIGNED &amp; BUILT BY RDN</span>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="js/app.js"></script>
 </body>
