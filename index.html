@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rimon Debnath — Software Engineer (AI) · Full-Stack Developer</title>
+  <meta name="description" content="Rimon Debnath — Software Engineer (AI) building full-stack web apps and LLM-powered systems with Next.js, React, Node.js, Python and AWS." />
+  <meta property="og:title" content="Rimon Debnath — Software Engineer (AI)" />
+  <meta property="og:description" content="Full-stack web apps & AI systems that ship to real users. Next.js · React · Node.js · Python · AWS · LLMs" />
+  <meta property="og:image" content="assets/og.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ PRELOADER ═══════════ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__name"><span>R</span><span>I</span><span>M</span><span>O</span><span>N</span>&nbsp;<span>D</span><span>E</span><span>B</span><span>N</span><span>A</span><span>T</span><span>H</span></div>
+      <div class="preloader__count" id="preCount">0</div>
+      <div class="preloader__bar"><div class="preloader__bar-fill" id="preBar"></div></div>
+    </div>
+    <div class="preloader__curtain"></div>
+    <div class="preloader__curtain preloader__curtain--2"></div>
+  </div>
+
+  <!-- ═══════════ CURSOR ═══════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo magnetic" data-cursor="hover">RDN<span class="accent">.</span></a>
+    <nav class="nav__links">
+      <a href="#about" class="nav__link" data-cursor="hover">About</a>
+      <a href="#skills" class="nav__link" data-cursor="hover">Stack</a>
+      <a href="#experience" class="nav__link" data-cursor="hover">Experience</a>
+      <a href="#work" class="nav__link" data-cursor="hover">Work</a>
+      <a href="#contact" class="nav__link" data-cursor="hover">Contact</a>
+    </nav>
+    <a href="mailto:rimonok12@gmail.com" class="nav__cta magnetic" data-cursor="hover">
+      <span class="nav__cta-dot"></span> Available for work
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Menu" data-cursor="hover"><span></span><span></span></button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu">
+    <div class="menu__links">
+      <a href="#about" class="menu__link">About</a>
+      <a href="#skills" class="menu__link">Stack</a>
+      <a href="#experience" class="menu__link">Experience</a>
+      <a href="#work" class="menu__link">Work</a>
+      <a href="#contact" class="menu__link">Contact</a>
+    </div>
+    <div class="menu__foot">
+      <a href="mailto:rimonok12@gmail.com">rimonok12@gmail.com</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="home">
+      <canvas id="webgl" class="hero__canvas"></canvas>
+      <div class="hero__noise"></div>
+
+      <div class="hero__content">
+        <div class="hero__tag reveal-line"><span class="mono">// SOFTWARE ENGINEER — AI & FULL-STACK</span></div>
+        <h1 class="hero__title">
+          <span class="hero__line"><span class="hero__word" data-split>RIMON</span></span>
+          <span class="hero__line hero__line--indent">
+            <span class="hero__word hero__word--outline" data-split>DEBNATH</span>
+          </span>
+        </h1>
+        <div class="hero__row">
+          <p class="hero__desc">I build full-stack web apps and <em>LLM-powered systems</em> that ship to real users — currently engineering the AI behind a fintech platform serving 7 divisions of Bangladesh.</p>
+          <div class="hero__roles mono">
+            <div class="hero__roles-track" id="rolesTrack">
+              <span>NEXT.JS &amp; REACT</span>
+              <span>AI / LLM WORKFLOWS</span>
+              <span>NODE.JS APIS</span>
+              <span>AWS CLOUD</span>
+              <span>DATA PIPELINES</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__bottom">
+          <a href="#work" class="hero__scroll magnetic" data-cursor="hover">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Scroll to explore
+          </a>
+          <div class="hero__loc mono">COMILLA, BD — <span id="dhakaTime">--:--</span> GMT+6</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ MARQUEE ═══════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>FULL-STACK DEVELOPMENT <i>✦</i> AI &amp; LLM INTEGRATION <i>✦</i> NEXT.JS <i>✦</i> REACT <i>✦</i> NODE.JS <i>✦</i> PYTHON <i>✦</i> AWS <i>✦</i> </span>
+        <span>FULL-STACK DEVELOPMENT <i>✦</i> AI &amp; LLM INTEGRATION <i>✦</i> NEXT.JS <i>✦</i> REACT <i>✦</i> NODE.JS <i>✦</i> PYTHON <i>✦</i> AWS <i>✦</i> </span>
+      </div>
+    </div>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section class="about section" id="about">
+      <div class="section__head">
+        <span class="section__num mono">01</span>
+        <h2 class="section__title" data-split-words>The engineer behind the code</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__img-wrap">
+          <div class="about__img-mask"><img src="assets/rimon.jpg" alt="Rimon Debnath" class="about__img" /></div>
+          <div class="about__img-frame"></div>
+        </div>
+        <div class="about__body">
+          <p class="about__text" data-split-words>I'm a Software Engineer (AI) at SahajMobile, a cardless-EMI fintech in Bangladesh — promoted from Frontend Developer within 5 months to build the AI systems and production frontend behind the platform.</p>
+          <p class="about__text about__text--dim" data-split-words>My LLM-powered workflows turn days of manual report and document production into minutes. My pipelines process hundreds of thousands of transaction records daily. Before that, I ran high-availability AWS infrastructure at Neovatech and shipped REST APIs at Younglabs. I care about clean code, honest timelines, and software that survives contact with real users.</p>
+          <div class="stats">
+            <div class="stat"><div class="stat__num"><span data-count="2">0</span>+</div><div class="stat__label mono">YEARS SHIPPING</div></div>
+            <div class="stat"><div class="stat__num"><span data-count="350">0</span>K+</div><div class="stat__label mono">RECORDS / DAY</div></div>
+            <div class="stat"><div class="stat__num"><span data-count="99.9" data-decimal="1">0</span>%</div><div class="stat__label mono">AWS UPTIME</div></div>
+            <div class="stat"><div class="stat__num"><span data-count="10">0</span>K+</div><div class="stat__label mono">MONTHLY USERS</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SKILLS ═══════════ -->
+    <section class="skills section" id="skills">
+      <div class="section__head">
+        <span class="section__num mono">02</span>
+        <h2 class="section__title" data-split-words>Weapons of choice</h2>
+      </div>
+      <div class="skills__rows">
+        <div class="skills__row" data-tilt-row>
+          <h3 class="skills__cat mono">FRONTEND</h3>
+          <div class="skills__pills"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Zustand</span><span>Vite</span><span>GSAP</span></div>
+        </div>
+        <div class="skills__row" data-tilt-row>
+          <h3 class="skills__cat mono">BACKEND</h3>
+          <div class="skills__pills"><span>Node.js</span><span>Express</span><span>REST APIs</span><span>Microservices</span><span>MongoDB</span><span>Redis</span><span>PostgreSQL</span><span>Meilisearch</span></div>
+        </div>
+        <div class="skills__row" data-tilt-row>
+          <h3 class="skills__cat mono">AI &amp; DATA</h3>
+          <div class="skills__pills"><span>LLM Integration</span><span>Prompt Engineering</span><span>OpenAI / Claude APIs</span><span>AI Workflow Automation</span><span>Python</span><span>Data Pipelines</span><span>Dashboards</span></div>
+        </div>
+        <div class="skills__row" data-tilt-row>
+          <h3 class="skills__cat mono">CLOUD &amp; DEVOPS</h3>
+          <div class="skills__pills"><span>AWS EC2</span><span>S3</span><span>Lambda</span><span>API Gateway</span><span>CloudWatch</span><span>Docker</span><span>GitHub Actions</span><span>CI/CD</span><span>Vercel</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <section class="exp section" id="experience">
+      <div class="section__head">
+        <span class="section__num mono">03</span>
+        <h2 class="section__title" data-split-words>Where I've shipped</h2>
+      </div>
+      <div class="exp__list">
+        <article class="exp__item">
+          <div class="exp__meta">
+            <span class="exp__date mono">MAY 2026 — PRESENT</span>
+            <span class="exp__badge">CURRENT</span>
+          </div>
+          <div class="exp__main">
+            <h3 class="exp__role">Software Engineer (AI)</h3>
+            <div class="exp__co">SahajMobile — Cardless EMI Fintech · Dhaka</div>
+            <p class="exp__desc">Promoted from Frontend Developer in 5 months. Shipping LLM workflows that generate reports, corporate documents and Bangla video content — cutting production time from days to minutes. Engineering data pipelines over 350K+ transaction records for field managers across 7 divisions.</p>
+          </div>
+        </article>
+        <article class="exp__item">
+          <div class="exp__meta"><span class="exp__date mono">DEC 2025 — APR 2026</span></div>
+          <div class="exp__main">
+            <h3 class="exp__role">Frontend Developer</h3>
+            <div class="exp__co">SahajMobile · Dhaka</div>
+            <p class="exp__desc">Delivered production frontend features in React, Next.js and Tailwind CSS, working directly with founders. Kept the platform stable for field teams — debugging production issues and managing database operations.</p>
+          </div>
+        </article>
+        <article class="exp__item">
+          <div class="exp__meta"><span class="exp__date mono">JAN 2025 — NOV 2025</span></div>
+          <div class="exp__main">
+            <h3 class="exp__role">Cloud Engineer &amp; Full-Stack Developer</h3>
+            <div class="exp__co">Neovatech · Remote</div>
+            <p class="exp__desc">Architected high-availability AWS infrastructure sustaining 99.9% uptime with 40% lower API latency. Built secure microservices for 7+ client projects serving 10,000+ monthly users. Cut deployment time from 3 days to under 24 hours with Docker + GitHub Actions.</p>
+          </div>
+        </article>
+        <article class="exp__item">
+          <div class="exp__meta"><span class="exp__date mono">APR 2022 — SEP 2022</span></div>
+          <div class="exp__main">
+            <h3 class="exp__role">Full-Stack Engineer</h3>
+            <div class="exp__co">Younglabs · Noida, India</div>
+            <p class="exp__desc">Created Node.js REST APIs handling 500+ concurrent users and delivered an MVP on a 12-week schedule with Firebase Auth and real-time features.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════ WORK ═══════════ -->
+    <section class="work section" id="work">
+      <div class="section__head">
+        <span class="section__num mono">04</span>
+        <h2 class="section__title" data-split-words>Selected works</h2>
+      </div>
+      <div class="work__list">
+
+        <a class="project" href="https://cartkoro.com" target="_blank" rel="noopener" data-cursor="view">
+          <div class="project__img-wrap"><img src="assets/p-cartkoro.png" alt="Cartkoro e-commerce platform" loading="lazy" /></div>
+          <div class="project__info">
+            <span class="project__idx mono">P.01</span>
+            <h3 class="project__name">Cartkoro</h3>
+            <p class="project__blurb">Full-featured e-commerce platform — JWT auth, catalog with Meilisearch, cart &amp; checkout, SSLCommerz payments, Redis caching, S3 media, admin panel.</p>
+            <div class="project__tags mono"><span>NEXT.JS</span><span>NODE.JS</span><span>MONGODB</span><span>REDIS</span><span>AWS S3</span></div>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Rimonok12/atsChecker" target="_blank" rel="noopener" data-cursor="view">
+          <div class="project__img-wrap"><img src="assets/p-cvscore.png" alt="CVScoreAI resume checker" loading="lazy" /></div>
+          <div class="project__info">
+            <span class="project__idx mono">P.02</span>
+            <h3 class="project__name">CVScoreAI</h3>
+            <p class="project__blurb">AI-powered ATS resume analyzer — instant score with category-wise breakdown, keyword &amp; structure feedback, PDF parsing with PDF.js.</p>
+            <div class="project__tags mono"><span>REACT</span><span>NEXT.JS</span><span>TYPESCRIPT</span><span>AI</span><span>ZUSTAND</span></div>
+          </div>
+        </a>
+
+        <a class="project" href="https://short-flix-three.vercel.app" target="_blank" rel="noopener" data-cursor="view">
+          <div class="project__img-wrap"><img src="assets/p-shortflix.png" alt="ShortFlix video platform" loading="lazy" /></div>
+          <div class="project__info">
+            <span class="project__idx mono">P.03</span>
+            <h3 class="project__name">ShortFlix</h3>
+            <p class="project__blurb">Mini video platform with a swipeable Shorts viewer, search filtering and auto-play — Node.js API + Next.js frontend, fully responsive.</p>
+            <div class="project__tags mono"><span>NEXT.JS</span><span>NODE.JS</span><span>API</span><span>VERCEL</span></div>
+          </div>
+        </a>
+
+        <a class="project" href="https://www.neovatech.in/" target="_blank" rel="noopener" data-cursor="view">
+          <div class="project__img-wrap"><img src="assets/p-neovatech.png" alt="NeovaTech landing page" loading="lazy" /></div>
+          <div class="project__info">
+            <span class="project__idx mono">P.04</span>
+            <h3 class="project__name">NeovaTech</h3>
+            <p class="project__blurb">Official landing page for a modern tech company — clean, fast and conversion-focused.</p>
+            <div class="project__tags mono"><span>REACT</span><span>LANDING</span><span>UI/UX</span></div>
+          </div>
+        </a>
+
+        <a class="project" href="https://rdn-awwardwinning.netlify.app/" target="_blank" rel="noopener" data-cursor="view">
+          <div class="project__img-wrap"><img src="assets/p-metagame.png" alt="Metagame Nexus" loading="lazy" /></div>
+          <div class="project__info">
+            <span class="project__idx mono">P.05</span>
+            <h3 class="project__name">Metagame Nexus</h3>
+            <p class="project__blurb">A futuristic play-economy concept site with award-style animations, scroll-driven scenes and bold typography.</p>
+            <div class="project__tags mono"><span>GSAP</span><span>REACT</span><span>ANIMATION</span></div>
+          </div>
+        </a>
+
+      </div>
+      <div class="work__more">
+        <a href="https://github.com/Rimonok12?tab=repositories" target="_blank" rel="noopener" class="btn magnetic" data-cursor="hover">
+          All repositories <span class="btn__arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVICES STRIP ═══════════ -->
+    <section class="services section">
+      <div class="section__head">
+        <span class="section__num mono">05</span>
+        <h2 class="section__title" data-split-words>What I can do for you</h2>
+      </div>
+      <div class="services__list">
+        <div class="service"><span class="service__num mono">S.01</span><h3>Full-Stack Web Apps</h3><p>React · Next.js · TypeScript · Node.js — from Figma to production.</p></div>
+        <div class="service"><span class="service__num mono">S.02</span><h3>AI Features That Ship</h3><p>LLM integrations, chatbots, document &amp; report generation, data pipelines.</p></div>
+        <div class="service"><span class="service__num mono">S.03</span><h3>Cloud &amp; DevOps</h3><p>AWS architecture, Docker, CI/CD — 99.9% uptime is a habit, not a promise.</p></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="contact section" id="contact">
+      <div class="contact__inner">
+        <p class="contact__kicker mono reveal-line">HAVE A PROJECT IN MIND?</p>
+        <a href="mailto:rimonok12@gmail.com" class="contact__big" data-cursor="hover">
+          <span class="contact__big-line" data-split>LET'S BUILD</span>
+          <span class="contact__big-line contact__big-line--accent" data-split>SOMETHING</span>
+        </a>
+        <div class="contact__links">
+          <a href="mailto:rimonok12@gmail.com" class="contact__link magnetic" data-cursor="hover">rimonok12@gmail.com</a>
+          <a href="https://www.upwork.com/freelancers/rimondebnath" target="_blank" rel="noopener" class="contact__link magnetic" data-cursor="hover">Hire me on Upwork</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="footer__left mono">© <span id="year">2026</span> RIMON DEBNATH</div>
+    <div class="footer__socials">
+      <a href="https://github.com/Rimonok12" target="_blank" rel="noopener" data-cursor="hover">GitHub</a>
+      <a href="https://linkedin.com/in/rimon12" target="_blank" rel="noopener" data-cursor="hover">LinkedIn</a>
+      <a href="mailto:rimonok12@gmail.com" data-cursor="hover">Email</a>
+    </div>
+    <div class="footer__right mono">COMILLA, BANGLADESH · GMT+6</div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
