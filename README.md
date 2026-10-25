@@ -2,10 +2,10 @@
 
 Premium animated developer portfolio. Dark, kinetic-typography design with:
 
-- Three.js particle field hero
+- Raw WebGL silk-shader hero (no Three.js)
 - GSAP + ScrollTrigger scroll animations
 - Lenis smooth scrolling
-- Custom cursor, magnetic buttons, marquee, animated counters
+- Custom cursor, magnetic buttons, marquee, animated counters, horizontal "Selected work" card rail
 - Pure static site — zero build step
 
 **Live:** deployed on Vercel · **Author:** [Rimon Debnath](https://github.com/Rimonok12)

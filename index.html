@@ -7,15 +7,25 @@
   <meta name="description" content="Rimon Debnath — Software Engineer (AI) building full-stack web apps and LLM-powered systems with Next.js, React, Node.js, Python and AWS." />
   <meta property="og:title" content="Rimon Debnath — Software Engineer (AI)" />
   <meta property="og:description" content="Full-stack web apps & AI systems that ship to real users. Next.js · React · Node.js · Python · AWS · LLMs" />
-  <meta property="og:image" content="assets/og.png" />
+  <meta property="og:image" content="https://rimon-portfolio.vercel.app/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Rimon Debnath — Software Engineer (AI) and full-stack developer" />
+  <meta property="og:url" content="https://rimon-portfolio.vercel.app/" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://rimon-portfolio.vercel.app/assets/og.png" />
+  <meta name="theme-color" content="#0b0a09" />
+  <link rel="canonical" href="https://rimon-portfolio.vercel.app/" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[0]=clash-display@400,500,600,700&f[1]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <noscript><style>.preloader { display: none; }</style></noscript>
 </head>
 <body>
 
@@ -26,7 +36,7 @@
   <div class="grain" aria-hidden="true"></div>
 
   <!-- ═══ PRELOADER ═══ -->
-  <div class="preloader" id="preloader">
+  <div class="preloader" id="preloader" aria-hidden="true">
     <div class="preloader__inner">
       <div class="preloader__brand mono">RDN — PORTFOLIO ©2026</div>
       <div class="preloader__word" id="preWord">RIMON DEBNATH</div>
@@ -40,8 +50,8 @@
   </div>
 
   <!-- ═══ CURSOR ═══ -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-label mono" id="cursorLabel">OPEN ↗</div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-label mono" id="cursorLabel" aria-hidden="true">OPEN ↗</div>
 
   <!-- ═══ NAV ═══ -->
   <header class="nav" id="nav">
@@ -52,11 +62,11 @@
       <a href="#work" class="nav__link" data-hover><span class="mono nav__idx">03</span>Work</a>
       <a href="#contact" class="nav__link" data-hover><span class="mono nav__idx">04</span>Contact</a>
     </nav>
-    <a href="mailto:rimonok12@gmail.com" class="nav__cta" data-hover><span class="nav__dot"></span>Open to work</a>
-    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+    <a href="mailto:rimonok12@gmail.com" class="nav__cta" data-hover><span class="nav__dot"></span>Open to contract work</a>
+    <button class="nav__burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </header>
 
-  <div class="menu" id="menu">
+  <div class="menu" id="menu" inert data-lenis-prevent>
     <div class="menu__links">
       <a href="#about" class="menu__link"><span class="mono">01</span>About</a>
       <a href="#experience" class="menu__link"><span class="mono">02</span>Experience</a>
@@ -78,10 +88,16 @@
           <span class="mono reveal-b">BASED IN BANGLADESH</span>
         </div>
 
-        <h1 class="hero__title">
-          <span class="hero__row"><span class="hero__word" data-chars>CREATIVE</span><span class="hero__thin" data-chars>DEV</span></span>
-          <span class="hero__row hero__row--right"><span class="hero__thin hero__thin--it" data-chars>&amp;</span><span class="hero__word hero__word--stroke" data-chars>AI&nbsp;ENGINEER</span></span>
-        </h1>
+        <div class="hero__mid">
+          <h1 class="hero__title" aria-label="Creative dev and AI engineer">
+            <span class="hero__row"><span class="hero__word" data-chars>CREATIVE</span><span class="hero__thin" data-chars>DEV</span></span>
+            <span class="hero__row hero__row--right"><span class="hero__thin hero__thin--it" data-chars>&amp;</span><span class="hero__word hero__word--stroke" data-chars>AI&nbsp;ENGINEER</span></span>
+          </h1>
+          <a href="#about" class="hero__badge" data-hover aria-label="Scroll down">
+            <svg viewBox="0 0 100 100" class="hero__badge-ring"><defs><path id="circ" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><text><textPath href="#circ">SCROLL — EXPLORE — SCROLL — EXPLORE — </textPath></text></svg>
+            <span class="hero__badge-arrow">↓</span>
+          </a>
+        </div>
 
         <div class="hero__base">
           <p class="hero__intro">I'm <b>Rimon Debnath</b> — I design and engineer full-stack products and LLM-powered systems that ship to real users, from fintech dashboards to production AI workflows.</p>
@@ -94,10 +110,6 @@
           </div>
         </div>
 
-        <a href="#about" class="hero__badge" data-hover aria-label="Scroll down">
-          <svg viewBox="0 0 100 100" class="hero__badge-ring"><defs><path id="circ" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><text><textPath href="#circ">SCROLL — EXPLORE — SCROLL — EXPLORE — </textPath></text></svg>
-          <span class="hero__badge-arrow">↓</span>
-        </a>
       </div>
     </section>
 
@@ -112,7 +124,7 @@
     <section class="about section" id="about">
       <div class="section__head">
         <span class="section__num" data-chars>01</span>
-        <span class="section__label mono">ABOUT — WHO I AM</span>
+        <h2 class="section__label mono">ABOUT — WHO I AM</h2>
       </div>
 
       <div class="about__grid">
@@ -127,21 +139,21 @@
         </div>
 
         <div class="about__body">
-          <p class="about__lead" data-words>I turn ambitious ideas into production software — currently building the AI brain of a cardless-EMI fintech, where my LLM workflows compress days of manual work into minutes.</p>
-          <p class="about__text" data-words>Promoted from Frontend Developer to Software Engineer (AI) in five months at SahajMobile. Before that I ran high-availability AWS infrastructure at Neovatech and shipped real-time APIs at Younglabs. I obsess over clean architecture, honest timelines, and interfaces that feel expensive.</p>
+          <p class="about__lead" data-words>I turn ambitious ideas into production software — currently building the AI systems behind a cardless-EMI smartphone financing platform, where my LLM workflows turn days of manual work into minutes.</p>
+          <p class="about__text" data-words>Promoted from Frontend Developer to Software Engineer (AI) in five months at SahajMobile. Before that I built high-availability AWS infrastructure for client projects at Neovatech and shipped Node.js REST APIs with Firebase real-time features at Younglabs. I obsess over clean architecture, honest timelines, and interfaces that feel expensive.</p>
           <div class="stats">
-            <div class="stat"><div class="stat__num"><span data-count="2">0</span>+</div><div class="stat__label mono">YEARS SHIPPING</div></div>
-            <div class="stat"><div class="stat__num"><span data-count="350">0</span>K+</div><div class="stat__label mono">RECORDS / DAY</div></div>
-            <div class="stat"><div class="stat__num"><span data-count="99.9" data-decimal="1">0</span>%</div><div class="stat__label mono">AWS UPTIME</div></div>
-            <div class="stat"><div class="stat__num"><span data-count="12">0</span>+</div><div class="stat__label mono">PROJECTS SHIPPED</div></div>
+            <div class="stat"><div class="stat__num"><span data-count="2">2</span>+</div><div class="stat__label mono">YEARS SHIPPING</div></div>
+            <div class="stat"><div class="stat__num"><span data-count="350">350</span>K+</div><div class="stat__label mono">TRANSACTION RECORDS</div></div>
+            <div class="stat"><div class="stat__num"><span data-count="99.9" data-decimal="1">99.9</span>%</div><div class="stat__label mono">AWS UPTIME</div></div>
+            <div class="stat"><div class="stat__num"><span data-count="7">7</span></div><div class="stat__label mono">DIVISIONS SERVED</div></div>
           </div>
         </div>
       </div>
 
       <div class="about__services">
-        <div class="svc" data-hover><span class="mono svc__idx">S/01</span><h3>Full-Stack Products</h3><p>Next.js · React · TypeScript · Node — design to deploy.</p></div>
-        <div class="svc" data-hover><span class="mono svc__idx">S/02</span><h3>AI That Ships</h3><p>LLM workflows, chatbots, document engines, data pipelines.</p></div>
-        <div class="svc" data-hover><span class="mono svc__idx">S/03</span><h3>Cloud &amp; Scale</h3><p>AWS architecture, Docker, CI/CD — 99.9% uptime as a habit.</p></div>
+        <div class="svc"><span class="mono svc__idx">S/01</span><h3>Full-Stack Products</h3><p>Next.js · React · TypeScript · Node — design to deploy.</p></div>
+        <div class="svc"><span class="mono svc__idx">S/02</span><h3>AI That Ships</h3><p>LLM workflows, document &amp; report engines, data pipelines.</p></div>
+        <div class="svc"><span class="mono svc__idx">S/03</span><h3>Cloud &amp; Scale</h3><p>AWS architecture, Docker, CI/CD — 99.9% uptime on Neovatech client infrastructure.</p></div>
       </div>
     </section>
 
@@ -149,40 +161,40 @@
     <section class="exp section" id="experience">
       <div class="section__head">
         <span class="section__num" data-chars>02</span>
-        <span class="section__label mono">EXPERIENCE — WHERE I'VE SHIPPED</span>
+        <h2 class="section__label mono">EXPERIENCE — WHERE I'VE SHIPPED</h2>
       </div>
       <div class="exp__list">
         <article class="exp__item">
-          <span class="exp__date mono">2026 — NOW</span>
+          <span class="exp__date mono">MAY 2026 — NOW</span>
           <div class="exp__mid">
             <h3 class="exp__role">Software Engineer <em>(AI)</em></h3>
             <span class="exp__co mono">SAHAJMOBILE — FINTECH</span>
           </div>
-          <p class="exp__desc">Promoted in 5 months. LLM workflows generating reports, documents &amp; Bangla video; pipelines over 350K+ daily records for 7 divisions.</p>
+          <p class="exp__desc">Promoted after 5 months. LLM workflows behind Bangla-language reports, corporate documents &amp; video content; pipelines and dashboards turning 350K+ transaction records into numbers field managers use.</p>
         </article>
         <article class="exp__item">
-          <span class="exp__date mono">2025 — 2026</span>
+          <span class="exp__date mono">DEC 2025 — APR 2026</span>
           <div class="exp__mid">
             <h3 class="exp__role">Frontend Developer</h3>
             <span class="exp__co mono">SAHAJMOBILE — FINTECH</span>
           </div>
-          <p class="exp__desc">Production features in Next.js, React &amp; Tailwind, working directly with founders; kept the platform stable for field teams.</p>
+          <p class="exp__desc">Production features in Next.js, React &amp; Tailwind for the EMI platform, working directly with the founders on product direction; debugged production faults, supported backend/API integration and handled database operations including security and scheduled backups.</p>
         </article>
         <article class="exp__item">
-          <span class="exp__date mono">2025</span>
+          <span class="exp__date mono">JAN — NOV 2025</span>
           <div class="exp__mid">
-            <h3 class="exp__role">Cloud &amp; Full-Stack Engineer</h3>
+            <h3 class="exp__role">Cloud Engineer &amp; Full-Stack Developer</h3>
             <span class="exp__co mono">NEOVATECH — REMOTE</span>
           </div>
-          <p class="exp__desc">AWS architecture at 99.9% uptime, −40% API latency; microservices for 7+ clients and 10K+ monthly users; CI/CD from 3 days to &lt;24h.</p>
+          <p class="exp__desc">High-availability AWS at 99.9% uptime through 200% traffic spikes; microservices and APIs across 7+ client projects for 10K+ monthly users, with −40% latency; Docker + GitHub Actions CI/CD cut releases from 3 days to under 24 hours.</p>
         </article>
         <article class="exp__item">
-          <span class="exp__date mono">2022</span>
+          <span class="exp__date mono">APR — SEP 2022</span>
           <div class="exp__mid">
             <h3 class="exp__role">Full-Stack Engineer</h3>
             <span class="exp__co mono">YOUNGLABS — INDIA</span>
           </div>
-          <p class="exp__desc">Node.js REST APIs at 500+ concurrent users; MVP delivered on a 12-week schedule with Firebase auth and real-time features.</p>
+          <p class="exp__desc">Node.js REST APIs for 500+ concurrent users at 99.5% uptime; MVP shipped in 12 weeks with Firebase Auth and Realtime Database.</p>
         </article>
       </div>
     </section>
@@ -191,23 +203,115 @@
     <section class="work section" id="work">
       <div class="section__head">
         <span class="section__num" data-chars>03</span>
-        <span class="section__label mono">SELECTED WORK — 12 PROJECTS</span>
+        <span class="section__label mono">WORK — WHAT I'VE BUILT</span>
       </div>
 
-      <ul class="plist" id="plist">
-        <li><a class="prow" href="#" data-tags="NEXT.JS · REACT · TYPESCRIPT · FINTECH" data-cat="WORK / SAHAJMOBILE" data-year="2026"><span class="prow__idx mono">01</span><span class="prow__name">EMI Platform Frontend</span><span class="prow__cat mono">WORK / SAHAJMOBILE</span><span class="prow__year mono">2026</span><span class="prow__arr">●</span></a></li>
-        <li><a class="prow" href="#" data-tags="LLM · PYTHON · PROMPT PIPELINES · BANGLA" data-cat="WORK / SAHAJMOBILE" data-year="2026"><span class="prow__idx mono">02</span><span class="prow__name">AI Document &amp; Report Engine</span><span class="prow__cat mono">WORK / SAHAJMOBILE</span><span class="prow__year mono">2026</span><span class="prow__arr">●</span></a></li>
-        <li><a class="prow" href="#" data-tags="NEXT.JS · PYTHON · SQL · 350K+ RECORDS" data-cat="WORK / SAHAJMOBILE" data-year="2026"><span class="prow__idx mono">03</span><span class="prow__name">Collections Intelligence Dashboard</span><span class="prow__cat mono">WORK / SAHAJMOBILE</span><span class="prow__year mono">2026</span><span class="prow__arr">●</span></a></li>
-        <li><a class="prow" href="#" data-tags="LLM · TTS · AUTOMATION · VIDEO" data-cat="WORK / SAHAJMOBILE" data-year="2026"><span class="prow__idx mono">04</span><span class="prow__name">Bangla AI Video Pipeline</span><span class="prow__cat mono">WORK / SAHAJMOBILE</span><span class="prow__year mono">2026</span><span class="prow__arr">●</span></a></li>
-        <li><a class="prow" href="https://locus-navy.vercel.app" target="_blank" rel="noopener" data-tags="NEXT.JS · SUPABASE · REALTIME · MIT" data-cat="PERSONAL / LIVE" data-year="2026"><span class="prow__idx mono">05</span><span class="prow__name">Locus — Issue Tracker</span><span class="prow__cat mono">PERSONAL / LIVE</span><span class="prow__year mono">2026</span><span class="prow__arr">↗</span></a></li>
-        <li><a class="prow" href="https://github.com/Rimonok12/atsChecker" target="_blank" rel="noopener" data-tags="REACT · NEXT.JS · AI SCORING · PDF.JS" data-cat="PERSONAL / AI" data-year="2025"><span class="prow__idx mono">06</span><span class="prow__name">CVScoreAI — ATS Checker</span><span class="prow__cat mono">PERSONAL / AI</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
-        <li><a class="prow" href="https://github.com/Rimonok12/SHORT-FLIX" target="_blank" rel="noopener" data-tags="NEXT.JS · NODE API · SWIPE UX" data-cat="PERSONAL / CODE" data-year="2025"><span class="prow__idx mono">07</span><span class="prow__name">ShortFlix Video Platform</span><span class="prow__cat mono">PERSONAL / CODE</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
-        <li><a class="prow" href="https://github.com/Rimonok12/Modern_Bank-HOOBANK" target="_blank" rel="noopener" data-tags="REACT · VITE · TAILWIND · UI/UX" data-cat="PERSONAL / CODE" data-year="2025"><span class="prow__idx mono">08</span><span class="prow__name">Modern Banking App</span><span class="prow__cat mono">PERSONAL / CODE</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
-        <li><a class="prow" href="https://rdn-awwardwinning.netlify.app/" target="_blank" rel="noopener" data-tags="GSAP · SCROLL SCENES · MOTION" data-cat="PERSONAL / MOTION" data-year="2025"><span class="prow__idx mono">09</span><span class="prow__name">Metagame Nexus</span><span class="prow__cat mono">PERSONAL / MOTION</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
-        <li><a class="prow" href="https://www.neovatech.in/" target="_blank" rel="noopener" data-tags="REACT · LANDING · BRAND SITE" data-cat="CLIENT / NEOVATECH" data-year="2025"><span class="prow__idx mono">10</span><span class="prow__name">NeovaTech Company Site</span><span class="prow__cat mono">CLIENT / NEOVATECH</span><span class="prow__year mono">2025</span><span class="prow__arr">↗</span></a></li>
-        <li><a class="prow" href="https://job-portal-five-nu-16.vercel.app" target="_blank" rel="noopener" data-tags="NEXT.JS · AUTH · SEARCH · CRUD" data-cat="PERSONAL / LIVE" data-year="2024"><span class="prow__idx mono">11</span><span class="prow__name">Job Portal</span><span class="prow__cat mono">PERSONAL / LIVE</span><span class="prow__year mono">2024</span><span class="prow__arr">↗</span></a></li>
-        <li><a class="prow" href="https://snazzy-cactus-e705ea.netlify.app/" target="_blank" rel="noopener" data-tags="REACT 19 · TMDB API · TAILWIND" data-cat="PERSONAL / LIVE" data-year="2024"><span class="prow__idx mono">12</span><span class="prow__name">CineScope Movie Explorer</span><span class="prow__cat mono">PERSONAL / LIVE</span><span class="prow__year mono">2024</span><span class="prow__arr">↗</span></a></li>
+      <div class="work__intro">
+        <h2 class="work__title" aria-label="Selected work"><span class="work__line"><span data-chars>SELECTED</span></span><span class="work__line work__line--stroke"><span data-chars>WORK</span><sup class="work__sup mono">(05)</sup></span></h2>
+        <p class="work__lede"><b>Two live side projects</b> with public code, and three systems from my day job at SahajMobile whose code is private.</p>
+      </div>
+
+      <div class="work__top">
+        <p class="work__hint mono"><span class="work__hint-desk">DRAG, SCROLL SIDEWAYS OR USE ← →</span><span class="work__hint-touch">SWIPE TO EXPLORE →</span></p>
+        <div class="work__ctrl">
+          <span class="sr-only" id="workLive" aria-live="polite"></span>
+          <span class="work__count mono" id="workCount" aria-hidden="true">01 / 05</span>
+          <button class="work__arrow" id="workPrev" type="button" aria-label="Previous project" aria-controls="workRail" aria-disabled="true"><span aria-hidden="true">←</span></button>
+          <button class="work__arrow" id="workNext" type="button" aria-label="Next project" aria-controls="workRail"><span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <ul class="work__rail" id="workRail" aria-label="Selected work, 5 projects">
+
+        <li class="wcard wcard--live">
+          <div class="wcard__media">
+            <img src="assets/work/locus.jpg" srcset="assets/work/locus-800.jpg 800w, assets/work/locus.jpg 1200w" sizes="(max-width: 700px) 84vw, (max-width: 1100px) 42vw, 31vw" width="1200" height="800" loading="lazy" decoding="async" draggable="false" alt="Locus board view: Todo and In Progress columns of issues with labels, next to a Linear-style sidebar." />
+            <span class="wcard__badge mono"><i class="wcard__dot"></i>LIVE</span>
+          </div>
+          <div class="wcard__body">
+            <div class="wcard__meta mono"><span><b>01</b>PERSONAL / LIVE</span><span>2026</span></div>
+            <h3 class="wcard__title"><a class="wcard__main" href="https://locus-navy.vercel.app" target="_blank" rel="noopener" draggable="false">Locus <span class="wcard__sub">Real-time Issue Tracker</span><span class="sr-only"> (live site, opens in a new tab)</span></a></h3>
+            <p class="wcard__desc">Open-source, Linear-style issue tracker: live multi-user boards on Supabase Realtime, row-level security on every table, optimistic updates with rollback.</p>
+            <ul class="wcard__tags mono" aria-label="Stack"><li>NEXT.JS</li><li>SUPABASE</li><li>REALTIME</li><li>MIT</li></ul>
+            <div class="wcard__foot">
+              <span class="wcard__link mono" aria-hidden="true">LIVE SITE <b>↗</b></span>
+              <a class="wcard__link wcard__link--alt mono" href="https://github.com/Rimonok12/Locus" target="_blank" rel="noopener" draggable="false" aria-label="Locus source code on GitHub">CODE <b>↗</b></a>
+            </div>
+          </div>
+        </li>
+
+        <li class="wcard wcard--live">
+          <div class="wcard__media">
+            <img src="assets/work/fitnessplus.jpg" srcset="assets/work/fitnessplus-800.jpg 800w, assets/work/fitnessplus.jpg 1200w" sizes="(max-width: 700px) 84vw, (max-width: 1100px) 42vw, 31vw" width="1200" height="800" loading="lazy" decoding="async" draggable="false" alt="FitnessPlus redesign concept hero: 'The art of good life.' headline, with a banner noting it is a design concept, not the official website." />
+            <span class="wcard__badge wcard__badge--sand mono">CONCEPT</span>
+          </div>
+          <div class="wcard__body">
+            <div class="wcard__meta mono"><span><b>02</b>PERSONAL / CONCEPT</span><span>2026</span></div>
+            <h3 class="wcard__title"><a class="wcard__main" href="https://fitnessplus-redesign.vercel.app" target="_blank" rel="noopener" draggable="false">FitnessPlus <span class="wcard__sub">Gym Website Redesign</span><span class="sr-only"> (live site, opens in a new tab)</span></a></h3>
+            <p class="wcard__desc">A redesign concept for a Dhaka gym, built on my own initiative: parallax hero, scroll-driven services gallery, stacking process cards, fully responsive and reduced-motion aware.</p>
+            <ul class="wcard__tags mono" aria-label="Stack"><li>NEXT.JS 16</li><li>MOTION</li><li>TAILWIND</li></ul>
+            <p class="wcard__note mono">UNOFFICIAL CONCEPT, NOT CLIENT WORK</p>
+            <div class="wcard__foot">
+              <span class="wcard__link mono" aria-hidden="true">LIVE SITE <b>↗</b></span>
+              <a class="wcard__link wcard__link--alt mono" href="https://github.com/Rimonok12/fitnessPlus" target="_blank" rel="noopener" draggable="false" aria-label="FitnessPlus redesign source code on GitHub">CODE <b>↗</b></a>
+            </div>
+          </div>
+        </li>
+
+        <li class="wcard wcard--nda" tabindex="0" aria-label="AI Document and Report Engine, SahajMobile, private">
+          <div class="wcard__media wcard__face wcard__face--a" aria-hidden="true">
+            <span class="wcard__art wcard__art--doc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="wcard__ghost">03</span>
+            <span class="wcard__flow mono">DATA → LLM → BANGLA</span>
+            <span class="wcard__big">Reports<em>&amp; Docs</em></span>
+            <span class="wcard__badge wcard__badge--nda mono">PRIVATE</span>
+          </div>
+          <div class="wcard__body">
+            <div class="wcard__meta mono"><span><b>03</b>WORK / SAHAJMOBILE</span><span>2026</span></div>
+            <h3 class="wcard__title">AI Document <span class="wcard__sub">&amp; Report Engine</span></h3>
+            <p class="wcard__desc">LLM workflows behind Bangla-language operational reports and corporate documents: jobs that took days of manual work now finish in minutes.</p>
+            <ul class="wcard__tags mono" aria-label="Stack"><li>LLM</li><li>PYTHON</li><li>PROMPT PIPELINES</li><li>BANGLA</li></ul>
+            <div class="wcard__foot"><span class="wcard__private mono"><i></i>PRIVATE COMPANY CODE</span></div>
+          </div>
+        </li>
+
+        <li class="wcard wcard--nda" tabindex="0" aria-label="EMI Platform Frontend, SahajMobile, private">
+          <div class="wcard__media wcard__face wcard__face--b" aria-hidden="true">
+            <span class="wcard__art wcard__art--emi"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="wcard__ghost">04</span>
+            <span class="wcard__flow mono">CARDLESS EMI · 7 DIVISIONS</span>
+            <span class="wcard__big">EMI<em>Platform</em></span>
+            <span class="wcard__badge wcard__badge--nda mono">PRIVATE</span>
+          </div>
+          <div class="wcard__body">
+            <div class="wcard__meta mono"><span><b>04</b>WORK / SAHAJMOBILE</span><span>2025–26</span></div>
+            <h3 class="wcard__title">EMI Platform <span class="wcard__sub">Frontend</span></h3>
+            <p class="wcard__desc">Production frontend for a cardless-EMI smartphone financing platform used by field operations across 7 divisions of Bangladesh.</p>
+            <ul class="wcard__tags mono" aria-label="Stack"><li>NEXT.JS</li><li>REACT</li><li>TYPESCRIPT</li><li>FINTECH</li></ul>
+            <div class="wcard__foot"><span class="wcard__private mono"><i></i>PRIVATE COMPANY CODE</span></div>
+          </div>
+        </li>
+
+        <li class="wcard wcard--nda" tabindex="0" aria-label="Bangla AI Video Pipeline, SahajMobile, private">
+          <div class="wcard__media wcard__face wcard__face--c" aria-hidden="true">
+            <span class="wcard__art wcard__art--film"><i></i><i></i><i></i><i></i><i></i><b></b></span>
+            <span class="wcard__ghost">05</span>
+            <span class="wcard__flow mono">LLM → BANGLA VIDEO</span>
+            <span class="wcard__big">Bangla<em>AI Video</em></span>
+            <span class="wcard__badge wcard__badge--nda mono">PRIVATE</span>
+          </div>
+          <div class="wcard__body">
+            <div class="wcard__meta mono"><span><b>05</b>WORK / SAHAJMOBILE</span><span>2026</span></div>
+            <h3 class="wcard__title">Bangla AI Video <span class="wcard__sub">Pipeline</span></h3>
+            <p class="wcard__desc">LLM workflows behind Bangla-language video content, part of the AI systems I build at SahajMobile.</p>
+            <ul class="wcard__tags mono" aria-label="Stack"><li>LLM</li><li>BANGLA</li><li>AUTOMATION</li><li>VIDEO</li></ul>
+            <div class="wcard__foot"><span class="wcard__private mono"><i></i>PRIVATE COMPANY CODE</span></div>
+          </div>
+        </li>
+
       </ul>
+
+      <div class="work__bar" aria-hidden="true"><span class="work__thumb" id="workThumb"></span></div>
 
       <div class="work__foot">
         <a href="https://github.com/Rimonok12?tab=repositories" target="_blank" rel="noopener" class="btn" data-hover>Full archive on GitHub <span>↗</span></a>
@@ -218,11 +322,11 @@
     <section class="contact section" id="contact">
       <div class="section__head">
         <span class="section__num" data-chars>04</span>
-        <span class="section__label mono">CONTACT — LET'S TALK</span>
+        <h2 class="section__label mono">CONTACT — LET'S TALK</h2>
       </div>
       <div class="contact__stage">
         <p class="contact__kick mono reveal-b">HAVE AN IDEA IN MIND?</p>
-        <a href="mailto:rimonok12@gmail.com" class="contact__big" data-hover>
+        <a href="mailto:rimonok12@gmail.com" class="contact__big" data-hover aria-label="Email Rimon: let's ship something rare">
           <span class="contact__line" data-chars>LET'S&nbsp;SHIP</span>
           <span class="contact__line contact__line--stroke" data-chars>SOMETHING&nbsp;RARE</span>
         </a>
@@ -238,7 +342,7 @@
     <span class="mono">© <span id="year">2026</span> RIMON DEBNATH</span>
     <div class="footer__soc mono">
       <a href="https://github.com/Rimonok12" target="_blank" rel="noopener" data-hover>GITHUB</a>
-      <a href="https://linkedin.com/in/rimon12" target="_blank" rel="noopener" data-hover>LINKEDIN</a>
+      <a href="https://www.linkedin.com/in/rimon12" target="_blank" rel="noopener" data-hover>LINKEDIN</a>
       <a href="mailto:rimonok12@gmail.com" data-hover>EMAIL</a>
     </div>
     <span class="mono">DESIGNED &amp; BUILT BY RDN</span>
