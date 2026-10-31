@@ -207,21 +207,38 @@
       </div>
 
       <div class="work__intro">
-        <h2 class="work__title" aria-label="Selected work"><span class="work__line"><span data-chars>SELECTED</span></span><span class="work__line work__line--stroke"><span data-chars>WORK</span><sup class="work__sup mono">(05)</sup></span></h2>
-        <p class="work__lede"><b>Two live side projects</b> with public code, and three systems from my day job at a fintech company, whose code is private.</p>
+        <h2 class="work__title" aria-label="Selected work"><span class="work__line"><span data-chars>SELECTED</span></span><span class="work__line work__line--stroke"><span data-chars>WORK</span><sup class="work__sup mono">(06)</sup></span></h2>
+        <p class="work__lede"><b>Three live side projects</b> with public code, and three systems from my day job at a fintech company, whose code is private.</p>
       </div>
 
       <div class="work__top">
         <p class="work__hint mono"><span class="work__hint-desk">DRAG, SCROLL SIDEWAYS OR USE ← →</span><span class="work__hint-touch">SWIPE TO EXPLORE →</span></p>
         <div class="work__ctrl">
           <span class="sr-only" id="workLive" aria-live="polite"></span>
-          <span class="work__count mono" id="workCount" aria-hidden="true">01 / 05</span>
+          <span class="work__count mono" id="workCount" aria-hidden="true">01 / 06</span>
           <button class="work__arrow" id="workPrev" type="button" aria-label="Previous project" aria-controls="workRail" aria-disabled="true"><span aria-hidden="true">←</span></button>
           <button class="work__arrow" id="workNext" type="button" aria-label="Next project" aria-controls="workRail"><span aria-hidden="true">→</span></button>
         </div>
       </div>
 
-      <ul class="work__rail" id="workRail" aria-label="Selected work, 5 projects">
+      <ul class="work__rail" id="workRail" aria-label="Selected work, 6 projects">
+
+        <li class="wcard wcard--live">
+          <div class="wcard__media">
+            <img src="assets/work/aegis.jpg" srcset="assets/work/aegis-800.jpg 800w, assets/work/aegis.jpg 1200w" sizes="(max-width: 700px) 84vw, (max-width: 1100px) 42vw, 31vw" width="1200" height="800" loading="lazy" decoding="async" draggable="false" alt="Aegis landing page in dark mode: 'Raw scan logs in. Board-ready risk reports out.' headline, with stats for sanitised findings, National ID access and row-level tenant isolation." />
+            <span class="wcard__badge mono"><i class="wcard__dot"></i>LIVE</span>
+          </div>
+          <div class="wcard__body">
+            <div class="wcard__meta mono"><span><b>01</b>PERSONAL / LIVE</span><span>2026</span></div>
+            <h3 class="wcard__title"><a class="wcard__main" href="https://aegis-portal-navy.vercel.app" target="_blank" rel="noopener" draggable="false">Aegis <span class="wcard__sub">Vulnerability Report Portal</span><span class="sr-only"> (live site, opens in a new tab)</span></a></h3>
+            <p class="wcard__desc">Multi-tenant security portal: turns raw Nessus and Nmap scans into executive reports. Findings are sanitised before storage, a local LLM drafts the summary, and access is gated by National ID checks.</p>
+            <ul class="wcard__tags mono" aria-label="Stack"><li>NEXT.JS 16</li><li>FASTAPI</li><li>SUPABASE</li><li>LOCAL LLM</li></ul>
+            <div class="wcard__foot">
+              <span class="wcard__link mono" aria-hidden="true">LIVE SITE <b>↗</b></span>
+              <a class="wcard__link wcard__link--alt mono" href="https://github.com/Rimonok12/Vapt_Aegis" target="_blank" rel="noopener" draggable="false" aria-label="Aegis source code on GitHub">CODE <b>↗</b></a>
+            </div>
+          </div>
+        </li>
 
         <li class="wcard wcard--live">
           <div class="wcard__media">
@@ -229,7 +246,7 @@
             <span class="wcard__badge mono"><i class="wcard__dot"></i>LIVE</span>
           </div>
           <div class="wcard__body">
-            <div class="wcard__meta mono"><span><b>01</b>PERSONAL / LIVE</span><span>2026</span></div>
+            <div class="wcard__meta mono"><span><b>02</b>PERSONAL / LIVE</span><span>2026</span></div>
             <h3 class="wcard__title"><a class="wcard__main" href="https://locus-navy.vercel.app" target="_blank" rel="noopener" draggable="false">Locus <span class="wcard__sub">Real-time Issue Tracker</span><span class="sr-only"> (live site, opens in a new tab)</span></a></h3>
             <p class="wcard__desc">Open-source, Linear-style issue tracker: live multi-user boards on Supabase Realtime, row-level security on every table, optimistic updates with rollback.</p>
             <ul class="wcard__tags mono" aria-label="Stack"><li>NEXT.JS</li><li>SUPABASE</li><li>REALTIME</li><li>MIT</li></ul>
@@ -246,7 +263,7 @@
             <span class="wcard__badge wcard__badge--sand mono">CONCEPT</span>
           </div>
           <div class="wcard__body">
-            <div class="wcard__meta mono"><span><b>02</b>PERSONAL / CONCEPT</span><span>2026</span></div>
+            <div class="wcard__meta mono"><span><b>03</b>PERSONAL / CONCEPT</span><span>2026</span></div>
             <h3 class="wcard__title"><a class="wcard__main" href="https://fitnessplus-redesign.vercel.app" target="_blank" rel="noopener" draggable="false">FitnessPlus <span class="wcard__sub">Gym Website Redesign</span><span class="sr-only"> (live site, opens in a new tab)</span></a></h3>
             <p class="wcard__desc">A redesign concept for a Dhaka gym, built on my own initiative: parallax hero, scroll-driven services gallery, stacking process cards, fully responsive and reduced-motion aware.</p>
             <ul class="wcard__tags mono" aria-label="Stack"><li>NEXT.JS 16</li><li>MOTION</li><li>TAILWIND</li></ul>
@@ -261,13 +278,13 @@
         <li class="wcard wcard--nda" tabindex="0" aria-label="AI Document and Report Engine, fintech day job, private">
           <div class="wcard__media wcard__face wcard__face--a" aria-hidden="true">
             <span class="wcard__art wcard__art--doc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-            <span class="wcard__ghost">03</span>
+            <span class="wcard__ghost">04</span>
             <span class="wcard__flow mono">DATA → LLM → BANGLA</span>
             <span class="wcard__big">Reports<em>&amp; Docs</em></span>
             <span class="wcard__badge wcard__badge--nda mono">PRIVATE</span>
           </div>
           <div class="wcard__body">
-            <div class="wcard__meta mono"><span><b>03</b>WORK / FINTECH</span><span>2026</span></div>
+            <div class="wcard__meta mono"><span><b>04</b>WORK / FINTECH</span><span>2026</span></div>
             <h3 class="wcard__title">AI Document <span class="wcard__sub">&amp; Report Engine</span></h3>
             <p class="wcard__desc">LLM workflows behind Bangla-language operational reports and corporate documents: jobs that took days of manual work now finish in minutes.</p>
             <ul class="wcard__tags mono" aria-label="Stack"><li>LLM</li><li>PYTHON</li><li>PROMPT PIPELINES</li><li>BANGLA</li></ul>
@@ -278,13 +295,13 @@
         <li class="wcard wcard--nda" tabindex="0" aria-label="EMI Platform Frontend, fintech day job, private">
           <div class="wcard__media wcard__face wcard__face--b" aria-hidden="true">
             <span class="wcard__art wcard__art--emi"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-            <span class="wcard__ghost">04</span>
+            <span class="wcard__ghost">05</span>
             <span class="wcard__flow mono">CARDLESS EMI · 7 DIVISIONS</span>
             <span class="wcard__big">EMI<em>Platform</em></span>
             <span class="wcard__badge wcard__badge--nda mono">PRIVATE</span>
           </div>
           <div class="wcard__body">
-            <div class="wcard__meta mono"><span><b>04</b>WORK / FINTECH</span><span>2025–26</span></div>
+            <div class="wcard__meta mono"><span><b>05</b>WORK / FINTECH</span><span>2025–26</span></div>
             <h3 class="wcard__title">EMI Platform <span class="wcard__sub">Frontend</span></h3>
             <p class="wcard__desc">Production frontend for a cardless-EMI smartphone financing platform used by field operations across 7 divisions of Bangladesh.</p>
             <ul class="wcard__tags mono" aria-label="Stack"><li>NEXT.JS</li><li>REACT</li><li>TYPESCRIPT</li><li>FINTECH</li></ul>
@@ -295,13 +312,13 @@
         <li class="wcard wcard--nda" tabindex="0" aria-label="Bangla AI Video Pipeline, fintech day job, private">
           <div class="wcard__media wcard__face wcard__face--c" aria-hidden="true">
             <span class="wcard__art wcard__art--film"><i></i><i></i><i></i><i></i><i></i><b></b></span>
-            <span class="wcard__ghost">05</span>
+            <span class="wcard__ghost">06</span>
             <span class="wcard__flow mono">LLM → BANGLA VIDEO</span>
             <span class="wcard__big">Bangla<em>AI Video</em></span>
             <span class="wcard__badge wcard__badge--nda mono">PRIVATE</span>
           </div>
           <div class="wcard__body">
-            <div class="wcard__meta mono"><span><b>05</b>WORK / FINTECH</span><span>2026</span></div>
+            <div class="wcard__meta mono"><span><b>06</b>WORK / FINTECH</span><span>2026</span></div>
             <h3 class="wcard__title">Bangla AI Video <span class="wcard__sub">Pipeline</span></h3>
             <p class="wcard__desc">LLM workflows behind Bangla-language video content, part of the AI systems I build in my day job.</p>
             <ul class="wcard__tags mono" aria-label="Stack"><li>LLM</li><li>BANGLA</li><li>AUTOMATION</li><li>VIDEO</li></ul>
